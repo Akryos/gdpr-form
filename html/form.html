@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col s12">
+        <h1>%FORM_TITLE%</h1>
+    </div>
+</div>
+    
+<form name="gdprFeedback" method="GET" action="%SELF%">
+    <input type="hidden" name="token" value="%%TOKEN%%" />
+    <input type="hidden" name="lang" value="%%LANG%%" />
+
+    <fieldset id="fieldsetGdpr">
+        <legend>%LEGEND_YESNO%</legend>
+
+        <p>
+          <label>
+            <input class="with-gap" name="gdpr" type="radio" value="1" id="gdprYes" %%GDPR_CHECKED_YES%% />
+            <span>%RECEIVE_MAIL_YES%</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="gdpr" type="radio" value="0" id="gdprNo" %%GDPR_CHECKED_NO%% />
+            <span>%RECEIVE_MAIL_NO%</span>
+          </label>
+        </p>
+    </fieldset>
+
+    <fieldset id="fieldsetOptions">
+            <legend>%LEGEND_OPTIONS%</legend>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="optionMailings" %%OPTION_MAILINGS_CHECKED%% />
+                    <span>%OPTION_MAILINGS%</span>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="optionTraining" %%OPTION_TRAINING_CHECKED%% />
+                    <span>%OPTION_TRAINING%</span>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="optionPatches" %%OPTION_PATCHES_CHECKED%% />
+                    <span>%OPTION_PATCHES%</span>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="optionStorage" %%OPTION_STORAGE_CHECKED%% />
+                    <span>%OPTION_STORAGE%</span>
+                </label>
+            </p>
+    </fieldset>
+
+    <fieldset id="fieldsetContact">
+        <legend>%LEGEND_CONTACT_DATA%</legend>
+
+        <div class="input-field col s12">
+            <i class="material-icons prefix">person</i>
+            <input type="text" name="name" value="%%NAME%%" />
+            <label for="last_name">%NAME_LABEL%</label>
+        </div>
+
+        <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input type="text" name="email" value="%%EMAIL%%" />
+            <label for="email">%EMAIL_LABEL%</label>
+        </div>
+    </fieldset>
+    
+    <fieldset id="fieldSetError" class="%FORM_ERROR_CLASS%">
+        <legend>%LEGEND_FORM_ERROR%</legend>
+        %FORM_ERROR_MESSAGES%
+    </fieldset>
+
+    <button class="btn waves-effect waves-light" type="submit" name="submit">
+        %SUBMIT_BUTTON%
+        <i class="material-icons right">send</i>
+    </button>
+
+</form>

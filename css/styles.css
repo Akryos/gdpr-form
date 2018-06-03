@@ -1,0 +1,18 @@
+body {
+    background: #dedede; 
+    padding: 20px; 
+    line-height: 1.5; 
+    font-family: verdana;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+fieldset:last-of-type {
+    margin-bottom: 20px;
+}
+
+h1 {
+    word-wrap: break-word;
+}
